@@ -1,0 +1,46 @@
+@model practica1.Models.ProductoCredito
+
+@{
+    ViewData["Title"] = "Nuevo Producto";
+}
+
+<h2>Nuevo Producto de Crédito</h2>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="Nombre" class="control-label"></label>
+        <input asp-for="Nombre" class="form-control" />
+        <span asp-validation-for="Nombre" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Tea" class="control-label"></label>
+        <input asp-for="Tea" class="form-control" />
+        <span asp-validation-for="Tea" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ComisionPct" class="control-label"></label>
+        <input asp-for="ComisionPct" class="form-control" />
+        <span asp-validation-for="ComisionPct" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="MinMeses" class="control-label"></label>
+        <input asp-for="MinMeses" class="form-control" />
+        <span asp-validation-for="MinMeses" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="MaxMeses" class="control-label"></label>
+        <input asp-for="MaxMeses" class="form-control" />
+        <span asp-validation-for="MaxMeses" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-success">Guardar</button>
+    <a asp-action="Index" class="btn btn-secondary">Volver</a>
+</form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
