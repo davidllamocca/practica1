@@ -32,6 +32,7 @@ flowchart TD
     LLM --> IAOPS
 
 ```
+## 2. Diagrama de Flujos  
 ```mermaid
 flowchart TD
     A1["n8n<br/>Cron 06:00 a.m."]
@@ -59,7 +60,7 @@ flowchart TD
     B4 -->|4| B5
     B5 -->|5| B6 
 ```    
-## 2. Secuencia de Flujo A
+## 3. Secuencia de Flujo A
 
 Ejecución Programada: Un temporizador interno en n8n activa el flujo de manera automática todos los días a las 06:00 a.m.
 
@@ -70,8 +71,8 @@ Procesamiento y Persistencia: El orquestador estandariza las mediciones y las gu
 Análisis de Anomalías: La información registrada se evalúa mediante el LLM multi-modelo para determinar picos inusuales de contaminación.
 
 Emisión de Alertas: En caso de confirmarse un patrón anómalo, n8n despacha una notificación de alerta hacia el canal de Telegram.
----
-## 3. Secuencia de Flujo B
+
+## 4. Secuencia de Flujo B
 
 Entrada de Consulta: El usuario escribe una pregunta en lenguaje natural a través de la interfaz del Frontend.
 
@@ -84,4 +85,3 @@ Generación de Respuesta: La consulta enriquecida con el contexto recuperado se 
 Formateo de Salida: n8n convierte la respuesta recibida en una estructura de datos JSON estandarizada.
 
 Renderizado Visual: El Frontend procesa el archivo JSON y genera gráficos dinámicos interactivos mediante Chart.js.
----
