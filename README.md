@@ -32,6 +32,7 @@ flowchart TD
     LLM --> IAOPS
 
 ```
+```mermaid
 flowchart TD
     A1["n8n<br/>Cron 06:00 a.m."]
     A2["APIs externas<br/>OpenAQ, SENAMHI"]
