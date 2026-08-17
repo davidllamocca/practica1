@@ -31,7 +31,7 @@ flowchart TD
     DB --> IAOPS
     LLM --> IAOPS
 
-flowchart TD
+
     A1["n8n<br/>Cron 06:00 a.m."]
     A2["APIs externas<br/>OpenAQ, SENAMHI"]
     A3[("PostgreSQL<br/>Guarda datos limpios")]
@@ -43,7 +43,7 @@ flowchart TD
     A3 -->|3| A4
     A4 -->|4| A5 
 
-flowchart TD
+
     B1["Frontend<br/>Usuario escribe pregunta"]
     B2["n8n<br/>Webhook POST /nlq"]
     B3[("PostgreSQL<br/>RAG: recupera contexto")]
