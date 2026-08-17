@@ -59,9 +59,8 @@ flowchart TD
     B4 -->|4| B5
     B5 -->|5| B6 
 ```    
-## 2. Secuencias de Flujos
+## 2. Secuencia de Flujo A
 
-Secuencia del Flujo A (grafico izquierdo)
 Ejecución Programada: Un temporizador interno en n8n activa el flujo de manera automática todos los días a las 06:00 a.m.
 
 Consulta a Fuentes Externas: n8n realiza peticiones HTTP a las APIs externas de OpenAQ y SENAMHI para extraer las lecturas más recientes.
@@ -71,8 +70,9 @@ Procesamiento y Persistencia: El orquestador estandariza las mediciones y las gu
 Análisis de Anomalías: La información registrada se evalúa mediante el LLM multi-modelo para determinar picos inusuales de contaminación.
 
 Emisión de Alertas: En caso de confirmarse un patrón anómalo, n8n despacha una notificación de alerta hacia el canal de Telegram.
+---
+## 3. Secuencia de Flujo B
 
-Secuencia del Flujo B (grafica derecha)
 Entrada de Consulta: El usuario escribe una pregunta en lenguaje natural a través de la interfaz del Frontend.
 
 Recepción Webhook: El Frontend envía una petición HTTP POST /nlq hacia el punto de entrada de n8n.
@@ -84,3 +84,4 @@ Generación de Respuesta: La consulta enriquecida con el contexto recuperado se 
 Formateo de Salida: n8n convierte la respuesta recibida en una estructura de datos JSON estandarizada.
 
 Renderizado Visual: El Frontend procesa el archivo JSON y genera gráficos dinámicos interactivos mediante Chart.js.
+---
