@@ -2,30 +2,28 @@
 
 ```mermaid
 flowchart TD
-    U["Usuario<br/>[Persona]"]
+    U["👤 Usuario<br/>[Persona]"]
 
-    subgraph EcoPredict ["EcoPredict & NLQ"]
-        FE["Frontend<br/>[Container: React/Vue]"]
-        N8N["n8n — Orquestador<br/>[Container: Self-hosted]"]
+    subgraph EcoPredict ["🏛️ EcoPredict & NLQ"]
+        FE["🖥️ Frontend<br/>[Container: React/Vue]"]
+        N8N["⚙️ n8n — Orquestador<br/>[Container: Self-hosted]"]
         
-        subgraph CapaDatos [" Almacenamiento & Modelo "]
-            DB[("PostgreSQL<br/>BD vectorial (RAG)")]
-            LLM["LLM multi-modelo<br/>Multimodelo (failover)"]
-        end
+        DB[("🛢️ PostgreSQL<br/>BD vectorial (RAG)")]
+        LLM["🤖 LLM multi-modelo<br/>Multimodelo (failover)"]
         
-        IAOPS["IA Ops / MLOps<br/>[Container: LangSmith/Langfuse]"]
+        IAOPS["📊 IA Ops / MLOps<br/>[Container: LangSmith/Langfuse]"]
     end
 
-    EXT_API["APIs externas<br/>OpenAQ, SENAMHI"]
-    TG["Telegram<br/>Canal externo"]
+    EXT_API["🌐 APIs externas<br/>OpenAQ, SENAMHI"]
+    TG["📲 Telegram<br/>Canal externo"]
 
-    %% Conexiones principales
+    %% Conexiones
     U --> FE
     FE --> N8N
     EXT_API --> N8N
     N8N --> DB
     N8N --> LLM
-    DB <-->|RAG| LLM
+    DB <--->|RAG| LLM
     LLM --> TG
     DB --> IAOPS
     LLM --> IAOPS
