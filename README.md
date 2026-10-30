@@ -478,4 +478,4 @@ Grupo1_EcoPredict-NLQ/
 - ✅ Consulta en lenguaje natural con RAG y pgvector (Flujo B).
 - ✅ Capa serverless BFF con caché para el dashboard (Flujo C · HT-07).
 - ✅ Analítica histórica por distrito con resumen semanal con IA (Flujo D).
-- 🔄 Integración del Flujo D en CI/CD y pruebas de contrato de QA.
+- ✅ Integración del Flujo D en CI/CD y pruebas de contrato de QA.
